@@ -1,5 +1,6 @@
 --INITIALIZE
 if not SCTTweaks then SCTTweaks = {} end
+SCTTweaks.item_icons = {}
 
 require("sctmlib")
 
