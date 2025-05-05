@@ -7,6 +7,7 @@ data:extend({
 		name = "sct-automation-science-pack",
 		icon = "__ScienceCostTweakerM__/graphics/icons/science-pack-1-128.png",
 		icon_size = 128,
+		essential = true,
 		effects =
 		{
 			{
@@ -45,6 +46,7 @@ data:extend({
 		name = "sct-logistic-science-pack",
 		icon = "__ScienceCostTweakerM__/graphics/icons/science-pack-2-128.png",
 		icon_size = 128,
+		essential = true,
 		effects = 
 		{
 --[[			
@@ -97,6 +99,7 @@ data:extend({
 		name = "sct-chemical-science-pack",
 		icon = "__ScienceCostTweakerM__/graphics/icons/science-pack-3-128.png",
 		icon_size = 128,
+		essential = true,
 		effects = 
 		{
 --[[			
@@ -113,7 +116,7 @@ data:extend({
 		prerequisites =
 		{
 			"sct-lab-t3",
-      "advanced-electronics"
+      "advanced-circuit"
 		},
 		unit =
 		{
@@ -134,6 +137,7 @@ data:extend({
 		name = "sct-military-science-pack",
 		icon = "__ScienceCostTweakerM__/graphics/icons/military-science-pack-128.png",
 		icon_size = 128,
+		essential = true,
 		effects = 
 		{
 --[[			
@@ -194,7 +198,8 @@ data:extend({
 		type = "technology",
 		name = "sct-production-science-pack",
 		icon = "__ScienceCostTweakerM__/graphics/icons/production-science-pack-128.png",
-		icon_size = 128,		
+		icon_size = 128,
+		essential = true,
 		effects = 
 		{
 --[[			
@@ -234,7 +239,7 @@ data:extend({
 --			"chemical-science-pack",
 			"circuit-network",
 			"advanced-material-processing-2",
-			"advanced-electronics-2",
+			"processing-unit",
       "advanced-oil-processing"
 --			"sct-lab-t4",
 		},
@@ -259,6 +264,7 @@ data:extend({
 		name = "sct-utility-science-pack",
 		icon = "__ScienceCostTweakerM__/graphics/icons/high-tech-science-pack-128.png",
 		icon_size = 128,
+		essential = true,
 		effects = 
 		{
 --[[			
@@ -313,6 +319,7 @@ data:extend({
 		name = "sct-space-science-pack",
 		icon = "__ScienceCostTweakerM__/graphics/icons/space-science-pack-128.png",
 		icon_size = 128,
+		essential = true,
 		effects = 
 		{
 --[[			
@@ -349,7 +356,7 @@ data:extend({
 
 -- military tech dependencies, based on settings
 if settings.startup["sct-military"].value == "tier2" then
-	sctm.tech_dependency_add("sct-military-science-pack", "advanced-electronics")
+	sctm.tech_dependency_add("sct-military-science-pack", "advanced-circuit")
 else
 -- tier 3.5 -- after blue, but does not require t4 lab
 	sctm.tech_dependency_add("sct-military-science-pack", "chemical-science-pack")

@@ -5,14 +5,15 @@ data:extend({
 	{
 		type = "technology",
 		name = "sct-lab-t1",
-		icon_size = 128,
 		icons = 
 		{
 			{
 				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t1/icon-128.png",
+				icon_size = 128,
 			},
 			{
 				icon = "__ScienceCostTweakerM__/graphics/overlays/1-128.png",
+				icon_size = 128,
 			},
 		},
 		effects = 
@@ -50,14 +51,16 @@ data:extend({
 	{
 		type = "technology",
 		name = "sct-lab-t2",
-		icon_size = 128,
+		
 		icons = 
 		{
 			{
 				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t2/icon-128.png",
+				icon_size = 128,
 			},
 			{
 				icon = "__ScienceCostTweakerM__/graphics/overlays/2-128.png",
+				icon_size = 128,
 			},
 		},
 		effects = 
@@ -99,14 +102,16 @@ data:extend({
 	{
 		type = "technology",
 		name = "sct-lab-t3",
-		icon_size = 128,
+		
 		icons = 
 		{
 			{
 				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t3/icon-128.png",
+				icon_size = 128,
 			},
 			{
 				icon = "__ScienceCostTweakerM__/graphics/overlays/3-128.png",
+				icon_size = 128,
 			},
 		},
 		effects = 
@@ -173,14 +178,16 @@ data:extend({
 	{
 		type = "technology",
 		name = "sct-lab-t4",
-		icon_size = 128,
+		
 		icons = 
 		{
 			{
 				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t4/icon-128.png",
+				icon_size = 128,
 			},
 			{
 				icon = "__ScienceCostTweakerM__/graphics/overlays/4-128.png",
+				icon_size = 128,
 			},
 		},
 		effects = 
@@ -205,9 +212,9 @@ data:extend({
 		prerequisites =
 		{
 --			"chemical-science-pack",
-			"advanced-electronics-2",
+			"processing-unit",
 			"uranium-processing",
-			"stack-inserter",
+			"bulk-inserter",
       "low-density-structure"
 		},
 		unit =
