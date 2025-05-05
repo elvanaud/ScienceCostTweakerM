@@ -63,6 +63,8 @@ if mods["angelsbioprocessing"] then
       name = "sct-bio-science-pack",
       subgroup = "sct-bio-science-pack",
       order = "d_a[bio]",
+      icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-bio-science-pack-64.png",
+      icon_size = 64,
       expensive =
       {
         enabled = false,
@@ -78,15 +80,15 @@ if mods["angelsbioprocessing"] then
           {type="item", name="sct-bio-science-pack", amount=1},
         },
       },
-      normal =
-      {
+      
+      normal = {
         enabled = false,
         always_show_made_in = true,
         energy_required = 5,
         ingredients =
         {
-          {"sct-bio-ground-sample", 1},
-          {"token-bio", 1},
+          {type = "item", name = "sct-bio-ground-sample", amount = 1},
+          {type = "item", name = "token-bio", amount = 1},
         },
         results = 
         {
@@ -100,6 +102,8 @@ if mods["angelsbioprocessing"] then
       name = "sct-bio-ground-sample",
       subgroup = "sct-bio-science-pack",
       order = "d_a[bio]-b[groundsample]",
+      icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-bio-ground-sample.png",
+      icon_size = 32,
       expensive =
       {
         enabled = false,
@@ -135,6 +139,8 @@ if mods["angelsbioprocessing"] then
       name = "sct-bio-sample-scaffold",
       subgroup = "sct-bio-science-pack",
       order = "d_a[bio]-c[scaffold]",
+      icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-bio-sample-scaffold.png",
+      icon_size = 32,
       expensive =
       {
         enabled = false,
@@ -171,6 +177,8 @@ if mods["angelsbioprocessing"] then
       subgroup = "sct-bio-science-pack",
       order = "d_a[bio]-d[filling]",
       category = "liquifying",
+      icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-bio-sample-filling.png",
+      icon_size = 32,
       expensive =
       {
         enabled = false,
@@ -240,8 +248,8 @@ if mods["angelsbioprocessing"] then
         count = 60,
         ingredients = 
         {
-          { type = "item", name = "automation-science-pack", amount = 1 },
-          { type = "item", name = "logistic-science-pack", amount = 1 },
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
         },
         time = 20,
       },
