@@ -32,3 +32,17 @@ local sciencepackh = table.deepcopy(data.raw.recipe["sct-utility-science-pack"])
 sctm.hide_recipe("sct-utility-science-pack")
 sciencepackh.name = "utility-science-pack"
 data.raw.recipe["utility-science-pack"] = sciencepackh
+
+for k,v in pairs(SCTTweaks.item_icons) do
+    if data.raw.recipe[v.name] then
+        recipe = data.raw.recipe[v.name]
+        if not recipe.icon and not recipe.icons then 
+            if v.icon then
+                recipe.icon = v.icon
+                recipe.icon_size = v.icon_size
+            elseif v.icons then
+                recipe.icons = v.icons
+            end
+        end
+    end
+end

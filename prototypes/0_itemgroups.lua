@@ -8,7 +8,7 @@ data:extend({
 		type = "item-group",
 		name = "sct-science",
 		order = "c-sct",
-		inventory_order = "c-sct",
+		-- inventory_order = "c-sct",
 		icon = "__ScienceCostTweakerM__/graphics/icons/sct-science-64.png",
 		icon_size = 64,
 
