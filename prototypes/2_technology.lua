@@ -19,22 +19,22 @@ scttechmap =
 	["sct-bio-science-pack"] = "sct-bio-science-pack",
 -- bobs	
 	["steam-science-pack"] = "sct-research-steam", -- technology placeholder, doesn't exists
-	["advanced-logistic-science-pack"] = "advanced-logistic-science-pack",
-	["science-pack-gold"] = "sct-science-pack-gold",
-	["effectivity-processor"] = "modules",
-	["module-case"] = "modules",
-	["module-circuit-board"] = "modules",
-	["pollution-clean-processor"] = "modules",
-	["pollution-create-processor"] = "modules",
-	["productivity-processor"] = "modules",
-	["speed-processor"] = "modules",
-	["alien-science-pack"] = "sct-alien-science-pack",
-	["alien-science-pack-blue"] = "alien-reseach",
-	["alien-science-pack-green"] = "alien-reseach",
-	["alien-science-pack-orange"] = "alien-reseach",
-	["alien-science-pack-purple"] = "alien-reseach",
-	["alien-science-pack-red"] = "alien-reseach",
-	["alien-science-pack-yellow"] = "alien-reseach",
+	["bob-advanced-logistic-science-pack"] = "bob-advanced-logistic-science-pack",
+	["bob-science-pack-gold"] = "sct-science-pack-gold",
+	["bob-efficiency-processor"] = "modules",
+	["bob-module-case"] = "modules",
+	["bob-module-circuit-board"] = "modules",
+	["bob-pollution-clean-processor"] = "modules",
+	["bob-pollution-create-processor"] = "modules",
+	["bob-productivity-processor"] = "modules",
+	["bob-speed-processor"] = "modules",
+	["bob-alien-science-pack"] = "sct-alien-science-pack",
+	["bob-alien-science-pack-blue"] = "alien-reseach",
+	["bob-alien-science-pack-green"] = "alien-reseach",
+	["bob-alien-science-pack-orange"] = "alien-reseach",
+	["bob-alien-science-pack-purple"] = "alien-reseach",
+	["bob-alien-science-pack-red"] = "alien-reseach",
+	["bob-alien-science-pack-yellow"] = "alien-reseach",
 -- aai
 	["sct-science-pack-0"] = "sct-research-t0", -- technology placeholder, doesn't exists
 }
@@ -152,7 +152,7 @@ sctm.tech_replace("production-science-pack", "sct-production-science-pack")
 sctm.tech_replace("utility-science-pack", "sct-utility-science-pack")
 sctm.tech_replace("space-science-pack", "sct-space-science-pack")
 --bob mods
-sctm.tech_replace("advanced-logistic-science-pack", "sct-advanced-logistic-science-pack")
+sctm.tech_replace("bob-advanced-logistic-science-pack", "sct-advanced-logistic-science-pack")
 
 if settings.startup["sct-connect-science"] and settings.startup["sct-connect-science"].value == true then
 	sctm.log("science connect started")
@@ -179,10 +179,10 @@ local knownpackmatchlist = {
 	{ partial = false, name = "military-science-pack" },
 	{ partial = false, name = "utility-science-pack" },
 	{ partial = false, name = "space-science-pack" },
-	{ partial = false, name = "advanced-logistic-science-pack" }, -- bobs
-	{ partial = false, name = "science-pack-gold" }, -- bobs
-	{ partial = false, name = "alien-science-pack" }, -- bobs
---	{ partial = true, name = "alien-science-pack-" },	-- bobs - leaving them under alien research
+	{ partial = false, name = "bob-advanced-logistic-science-pack" }, -- bobs
+	{ partial = false, name = "bob-science-pack-gold" }, -- bobs
+	{ partial = false, name = "bob-alien-science-pack" }, -- bobs
+--	{ partial = true, name = "bob-alien-science-pack-" },	-- bobs - leaving them under alien research
 	{ partial = false, name = "sct-bio-science-pack" }, -- angels
 --	{ partial = false, name = "omni-pack" }, -- omnimatter - leaving under omnipack-technology
 --	{ partial = false, name = "science-pack-t0" }, -- aai - should not have unlock at all

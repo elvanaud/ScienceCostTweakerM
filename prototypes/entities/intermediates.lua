@@ -1,4 +1,4 @@
-data:extend({
+intermediates = {
 
   -- Junk Byproducts
   -- =============================
@@ -506,4 +506,6 @@ data:extend({
     order = "b[labparts]-d[lab4]-c[manipulators]",
     stack_size = 10,
   },
-})
+}
+SCTTweaks.item_icons = intermediates
+data.extend(intermediates)
