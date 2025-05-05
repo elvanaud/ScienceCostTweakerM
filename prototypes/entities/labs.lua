@@ -83,13 +83,8 @@ data:extend({
 			"automation-science-pack",
 			"logistic-science-pack"
 		},
-		module_specification =
-		{
-			module_slots = 0,
-			max_entity_info_module_icons_per_row = 3,
-			max_entity_info_module_icon_rows = 1,
-			module_info_icon_shift = {0, 0.9},
-		},
+		
+		module_slots = 0,
 		fast_replaceable_group = "lab",
 		next_upgrade = "sct-lab-t3",
 	},
@@ -178,13 +173,7 @@ data:extend({
 			"production-science-pack",
 --			"utility-science-pack",
 		},
-		module_specification =
-		{
-			module_slots = 0,
-			max_entity_info_module_icons_per_row = 3,
-			max_entity_info_module_icon_rows = 1,
-			module_info_icon_shift = {0, 0.9}
-		},
+		module_slots = 0,
 		fast_replaceable_group = "lab",
 		next_upgrade = "sct-lab-t4"
 	},
@@ -275,13 +264,7 @@ data:extend({
 			"utility-science-pack",
 			"space-science-pack"
 		},
-		module_specification =
-		{
-			module_slots = 0,
-			max_entity_info_module_icons_per_row = 3,
-			max_entity_info_module_icon_rows = 1,
-			module_info_icon_shift = {0, 0.9}
-		},
+		module_slots = 0,
 		fast_replaceable_group = "lab",
 	},
 	
@@ -338,23 +321,17 @@ data.raw["lab"]["lab"].inputs =
 	{
 		"automation-science-pack"
 	}
-data.raw["lab"]["lab"].module_specification =
-	{
-		module_slots = 0,
-		max_entity_info_module_icons_per_row = 3,
-		max_entity_info_module_icon_rows = 1,
-		module_info_icon_shift = {0, 0.9}
-	}
+data.raw["lab"]["lab"].module_slots = 0
 data.raw["lab"]["lab"].fast_replaceable_group = "lab"
 data.raw["lab"]["lab"].next_upgrade = "sct-lab-t2"
 
 if settings.startup["sct-lab-modules"].value == "tier3" then
-	data.raw["lab"]["sct-lab-t3"].module_specification.module_slots = 1
-	data.raw["lab"]["sct-lab-t4"].module_specification.module_slots = 2
+	data.raw["lab"]["sct-lab-t3"].module_slots = 1
+	data.raw["lab"]["sct-lab-t4"].module_slots = 2
 end
 
 if settings.startup["sct-lab-modules"].value == "tier4" then
-	data.raw["lab"]["sct-lab-t4"].module_specification.module_slots = 2
+	data.raw["lab"]["sct-lab-t4"].module_slots = 2
 end
 
 if settings.startup["sct-lab-scaling"].value == true then
