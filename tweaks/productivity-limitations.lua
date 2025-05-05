@@ -6,9 +6,9 @@ local science_packs_and_intermediates =
 	"military-science-pack",
 	"production-science-pack",
 	"utility-science-pack",
-	"advanced-logistic-science-pack",
-	"alien-science-pack",
-	"science-pack-gold",
+	"bob-advanced-logistic-science-pack",
+	"bob-alien-science-pack",
+	"bob-science-pack-gold",
 	"omni-pack",
 }
 
@@ -29,5 +29,5 @@ if mods["angelsrefining"] and angelsmods and angelsmods.functions and angelsmods
 -- if bobsmod with productivity limit function exists, add it to list
 elseif mods["boblibrary"] and bobmods and bobmods.lib and bobmods.lib.module and bobmods.lib.module.add_productivity_limitations then
 -- sctm.log("bobprodlimit")
-	bobmods.lib.module.add_productivity_limitations(finallist)
+	bobmods.lib.module.add_productivity_limitations(finallist) -- TODO: remove this/ replace this ?
 end

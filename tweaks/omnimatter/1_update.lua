@@ -11,8 +11,8 @@ if mods["omnimatter_science"] and mods["omnimatter_crystal"] then
         sctm.lab_input_add("sct-lab-t3", "omni-pack")
         sctm.lab_input_add("sct-lab-t4", "omni-pack")
         -- add omnipack to bob labs
-        sctm.lab_input_add("lab-2", "omni-pack")
-        sctm.lab_input_add("lab-alien", "omni-pack")
+        sctm.lab_input_add("bob-lab-2", "omni-pack")
+        sctm.lab_input_add("bob-lab-alien", "omni-pack")
         -- add t3 lab dep on omnipack research (because it reuqires it)
         sctm.tech_dependency_add("sct-lab-t3", "omnipack-technology")
         -- omnipack icons
