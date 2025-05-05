@@ -229,7 +229,7 @@ data:extend({
 			ingredients = 
 			{
 				{"sct-htech-injector", 1},
-				{"stack-filter-inserter", 5},
+				{"bulk-inserter", 5},
 				{"processing-unit", 15},
 			},
 			result = "sct-lab4-manipulators",
@@ -241,7 +241,7 @@ data:extend({
 			ingredients = 
 			{
 				{"sct-htech-injector", 1},
-				{"stack-filter-inserter", 2},
+				{"bulk-inserter", 2},
 				{"processing-unit", 5},
 			},
 			result = "sct-lab4-manipulators",

@@ -6,6 +6,7 @@ data:extend({
 		name = "sct-lab-t1",
 		subgroup = "sct-labs",
 		order = "a[labs]-a[sct-lab-t1]",
+		icon = "__ScienceCostTweakerM__/graphics/sct-lab-t1/icon-64.png", --default icon again
 		expensive =
 		{
 			enabled = false,
@@ -41,6 +42,7 @@ data:extend({
 		name = "sct-lab-t2",
 		subgroup = "sct-labs",
 		order = "a[labs]-b[sct-lab-t2]",
+		icon = "__ScienceCostTweakerM__/graphics/sct-lab-t2/icon-64.png",
 		expensive =
 		{
 			enabled = false,
@@ -78,6 +80,7 @@ data:extend({
 		name = "sct-lab-t3",
 		subgroup = "sct-labs",
 		order = "b[labs]-c[sct-lab-t3]",
+		icon = "__ScienceCostTweakerM__/graphics/sct-lab-t3/icon-64.png",
 		expensive =
 		{
 			enabled = false,
@@ -115,6 +118,7 @@ data:extend({
 		name = "sct-lab-t4",
 		subgroup = "sct-labs",
 		order = "b[labs]-d[lab4]",
+		icon = "__ScienceCostTweakerM__/graphics/sct-lab-t4/icon-64.png",
 		expensive =
 		{
 			enabled = false,
