@@ -16,12 +16,13 @@ if mods["bobtech"] then
       name = "sct-advanced-logistic-science-pack",
       icon = "__ScienceCostTweakerM__/graphics/bobmods/logistic-science-pack-128.png",
       icon_size = 128,
+      essential = true,
       effects =
       {
 --[[      
         {
           type = "unlock-recipe",
-          recipe = "advanced-logistic-science-pack",
+          recipe = "bob-advanced-logistic-science-pack",
         },
 ]]--        
         {
@@ -62,9 +63,9 @@ if mods["bobtech"] then
   if not mods["bobelectronics"] then
     sctm.tech_dependency_add("sct-advanced-logistic-science-pack", "circuit-network")
   elseif mods["bobplates"] then 
-    sctm.tech_dependency_add("sct-advanced-logistic-science-pack", "advanced-electronics-2")
+    sctm.tech_dependency_add("sct-advanced-logistic-science-pack", "processing-unit")
   else
-    sctm.tech_dependency_add("sct-advanced-logistic-science-pack", "advanced-electronics-2")
+    sctm.tech_dependency_add("sct-advanced-logistic-science-pack", "processing-unit")
     sctm.tech_dependency_add("sct-advanced-logistic-science-pack", "circuit-network")
   end
 
@@ -118,6 +119,8 @@ if mods["bobtech"] then
       name = "sct-advanced-logistic-science-pack",
       subgroup = "sct-advanced-logistic-science-pack",
       order = "h_a[logistic]",
+      icon = "__ScienceCostTweakerM__/graphics/bobmods/logistic-science-pack.png",
+      icon_size = 32,
       --[[
       expensive = 
       {
@@ -130,7 +133,7 @@ if mods["bobtech"] then
         },
         results =
         {
-          { type="item", name="advanced-logistic-science-pack", amount=2 },
+          { type="item", name="bob-advanced-logistic-science-pack", amount=2 },
         },
       },
       ]]--
@@ -146,7 +149,7 @@ if mods["bobtech"] then
         },
         results =
         {
-          { type="item", name="advanced-logistic-science-pack", amount=2 },
+          { type="item", name="bob-advanced-logistic-science-pack", amount=2 },
         },
       },
       normal = 
@@ -161,7 +164,7 @@ if mods["bobtech"] then
         },
         results =
         {
-          { type="item", name="advanced-logistic-science-pack", amount=2 },
+          { type="item", name="bob-advanced-logistic-science-pack", amount=2 },
         },
       },
     }
@@ -174,6 +177,8 @@ if mods["bobtech"] then
       name = "sct-logistic-cargo-unit",
       subgroup = "sct-advanced-logistic-science-pack",
       order = "h_a[logistic]-b[cargo]",
+      icon = "__ScienceCostTweakerM__/graphics/bobmods/sct-logistic-cargo-unit.png",
+      icon_size = 32,
       --[[
       expensive =
       {
@@ -228,16 +233,18 @@ if mods["bobtech"] then
         name = "sct-logistic-automated-storage",
         subgroup = "sct-advanced-logistic-science-pack",
         order = "h_a[logistic]-d[storage]",
+        icon = "__ScienceCostTweakerM__/graphics/bobmods/sct-logistic-automated-storage.png",
+        icon_size = 32,
         expensive =
         {
           enabled = false,
           energy_required = 4,
           ingredients =
           {
-            {"titanium-gear-wheel", 6},
-            {"cobalt-steel-bearing-ball", 6},
+            {"bob-titanium-gear-wheel", 6},
+            {"bob-cobalt-steel-bearing-ball", 6},
             {"processing-unit", 2},
-            {"brass-alloy", 4},
+            {"bob-brass-alloy", 4},
           },
           results = 
           {
@@ -250,10 +257,10 @@ if mods["bobtech"] then
           energy_required = 2,
           ingredients =
           {
-            {"titanium-gear-wheel", 3},
-            {"cobalt-steel-bearing-ball", 3},
+            {"bob-titanium-gear-wheel", 3},
+            {"bob-cobalt-steel-bearing-ball", 3},
             {"processing-unit", 1},
-            {"brass-alloy", 2},
+            {"bob-brass-alloy", 2},
           },
           results = 
           {
@@ -270,6 +277,8 @@ if mods["bobtech"] then
         subgroup = "sct-advanced-logistic-science-pack",
         order = "h_a[logistic]-c[unimover]",
         category = "crafting-with-fluid",
+        icon = "__ScienceCostTweakerM__/graphics/bobmods/sct-logistic-unimover.png",
+        icon_size = 32,
         expensive =
         {
           enabled = false,
@@ -277,9 +286,9 @@ if mods["bobtech"] then
           ingredients =
           {
             {"advanced-circuit", 8},
-            {"titanium-bearing-ball", 12},
-            {"cobalt-steel-gear-wheel", 12},
-            {"aluminium-plate",15},
+            {"bob-titanium-bearing-ball", 12},
+            {"bob-cobalt-steel-gear-wheel", 12},
+            {"bob-aluminium-plate",15},
             {type="fluid", name="lubricant",amount=50}
           },
           results = 
@@ -294,9 +303,9 @@ if mods["bobtech"] then
           ingredients =
           {
             {"advanced-circuit", 4},
-            {"titanium-bearing-ball", 6},
-            {"cobalt-steel-gear-wheel", 6},
-            {"aluminium-plate",8},
+            {"bob-titanium-bearing-ball", 6},
+            {"bob-cobalt-steel-gear-wheel", 6},
+            {"bob-aluminium-plate",8},
             {type="fluid", name="lubricant",amount=20}
           },
           results = 
@@ -306,8 +315,8 @@ if mods["bobtech"] then
         },
       },
     })
-    sctm.tech_dependency_add("sct-advanced-logistic-science-pack", "cobalt-processing")
-    sctm.tech_dependency_add("sct-advanced-logistic-science-pack", "titanium-processing")
+    sctm.tech_dependency_add("sct-advanced-logistic-science-pack", "bob-cobalt-processing")
+    sctm.tech_dependency_add("sct-advanced-logistic-science-pack", "bob-titanium-processing")
   else
     data:extend({
       {
@@ -315,13 +324,15 @@ if mods["bobtech"] then
         name = "sct-logistic-automated-storage",
         subgroup = "sct-advanced-logistic-science-pack",
         order = "h_a[logistic]-d[storage]",
+        icon = "__ScienceCostTweakerM__/graphics/bobmods/sct-logistic-automated-storage.png",
+        icon_size = 32,
         expensive =
         {
           enabled = false,
           energy_required = 4,
           ingredients =
           {
-            {"filter-inserter", 1},
+            {"fast-inserter", 1},
             {"steel-chest", 3},
           },
           results = 
@@ -335,7 +346,7 @@ if mods["bobtech"] then
           energy_required = 2,
           ingredients =
           {
-            {"filter-inserter", 1},
+            {"fast-inserter", 1},
             {"steel-chest", 2},
           },
           results = 
@@ -352,6 +363,8 @@ if mods["bobtech"] then
         name = "sct-logistic-unimover",
         subgroup = "sct-advanced-logistic-science-pack",
         order = "h_a[logistic]-c[unimover]",
+        icon = "__ScienceCostTweakerM__/graphics/bobmods/sct-logistic-unimover.png",
+        icon_size = 32,
         expensive =
         {
           enabled = false,
@@ -393,6 +406,8 @@ if mods["bobtech"] then
         name = "sct-logistic-memory-unit",
         subgroup = "sct-advanced-logistic-science-pack",
         order = "h_a[logistic]-e[memory-unit]",
+        icon = "__ScienceCostTweakerM__/graphics/bobmods/sct-logistic-memory-unit.png",
+        icon_size = 32,
         expensive =
         {
           enabled = false,
@@ -430,15 +445,17 @@ if mods["bobtech"] then
         name = "sct-logistic-memory-unit",
         subgroup = "sct-advanced-logistic-science-pack",
         order = "h_a[logistic]-e[memory-unit]",
+        icon = "__ScienceCostTweakerM__/graphics/bobmods/sct-logistic-memory-unit.png",
+        icon_size = 32,
         expensive =
         {
           enabled = false,
           energy_required = 4,
           ingredients =
           {
-            {"gilded-copper-cable", 6},
-            {"intergrated-electronics", 4},
-            {"solder", 4}
+            {"bob-gilded-copper-cable", 6},
+            {"bob-integrated-electronics", 4},
+            {"bob-solder", 4}
           },
           results = 
           {
@@ -451,9 +468,9 @@ if mods["bobtech"] then
           energy_required = 2,
           ingredients =
           {
-            {"gilded-copper-cable", 3},
-            {"intergrated-electronics", 2},
-            {"solder", 2}
+            {"bob-gilded-copper-cable", 3},
+            {"bob-integrated-electronics", 2},
+            {"bob-solder", 2}
           },
           results = 
           {
@@ -469,13 +486,15 @@ if mods["bobtech"] then
         name = "sct-logistic-memory-unit",
         subgroup = "sct-advanced-logistic-science-pack",
         order = "h_a[logistic]-e[memory-unit]",
+        icon = "__ScienceCostTweakerM__/graphics/bobmods/sct-logistic-memory-unit.png",
+        icon_size = 32,
         expensive =
         {
           enabled = false,
           energy_required = 4,
           ingredients =
           {
-            {"intergrated-electronics", 4},
+            {"bob-integrated-electronics", 4},
             {"constant-combinator", 3},
           },
           results = 
@@ -489,7 +508,7 @@ if mods["bobtech"] then
           energy_required = 2,
           ingredients =
           {
-            {"intergrated-electronics", 4},
+            {"bob-integrated-electronics", 4},
             {"constant-combinator", 2},
           },
           results = 

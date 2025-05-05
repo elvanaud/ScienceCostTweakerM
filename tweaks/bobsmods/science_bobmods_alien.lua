@@ -28,7 +28,7 @@ data:extend({
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "lab-alien",
+				recipe = "bob-lab-alien",
 			},
 		},
 		prerequisites =
@@ -63,7 +63,7 @@ data:extend({
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "science-pack-gold",
+				recipe = "bob-science-pack-gold",
 			},
 		},
 		prerequisites =
@@ -95,32 +95,32 @@ data:extend({
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "alien-science-pack",
+				recipe = "bob-alien-science-pack",
 			},
 --[[			
 			{
 				type = "unlock-recipe",
-				recipe = "alien-science-pack-blue",
+				recipe = "bob-alien-science-pack-blue",
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "alien-science-pack-orange",
+				recipe = "bob-alien-science-pack-orange",
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "alien-science-pack-purple",
+				recipe = "bob-alien-science-pack-purple",
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "alien-science-pack-yellow",
+				recipe = "bob-alien-science-pack-yellow",
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "alien-science-pack-green",
+				recipe = "bob-alien-science-pack-green",
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "alien-science-pack-red",
+				recipe = "bob-alien-science-pack-red",
 			},
 ]]--			
 		},
@@ -134,13 +134,13 @@ data:extend({
 			count = 120,
 			ingredients = 
 			{
-				{"science-pack-gold", 1},
+				{"bob-science-pack-gold", 1},
 			},
 			time = 4,
 		},
 		order = "sct-pack-e[alien]",
 	},
 })
-sctm.tech_unlock_remove("alien-research", "science-pack-gold")
-sctm.tech_unlock_remove("alien-research", "alien-science-pack")
+sctm.tech_unlock_remove("bob-alien-research", "bob-science-pack-gold")
+sctm.tech_unlock_remove("bob-alien-research", "bob-alien-science-pack")
 end

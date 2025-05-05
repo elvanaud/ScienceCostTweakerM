@@ -5,28 +5,29 @@ if mods["bobtech"] then
 		{
 			type = "technology",
 			name = "sct-lab-lab2",
-			icon_size = 128,
 			icons =
 			{
 				{
 					icon = "__ScienceCostTweakerM__/graphics/bobmods/lab2-128.png",
+					icon_size = 128,
 				},
 				{
 					icon = "__ScienceCostTweakerM__/graphics/overlays/beta-128.png",
+					icon_size = 128,
 				},
 			},		
 			effects = 
 			{
 				{
 					type = "unlock-recipe",
-					recipe = "lab-2",
+					recipe = "bob-lab-2",
 				},
 			},
 			prerequisites =
 			{
 				"utility-science-pack",
 				"production-science-pack",
-				"advanced-logistic-science-pack",
+				"bob-advanced-logistic-science-pack",
 			},
 			unit =
 			{
@@ -38,7 +39,7 @@ if mods["bobtech"] then
 					{"chemical-science-pack", 1},
 					{"production-science-pack", 1},
 					{"utility-science-pack", 1},
-					{"advanced-logistic-science-pack",1}
+					{"bob-advanced-logistic-science-pack",1}
 				},
 				time = 40,
 			},
