@@ -10,6 +10,7 @@ data:extend(
 			name = "sct-automation-science-pack",
 			subgroup = "sct-sciencepack-1",
 			order = "d[t1]-a[automation-science-pack]",
+			icon = "__ScienceCostTweakerM__/graphics/icons/science-pack-1-64.png", -- default icon, else doesn't work
 --[[
 			expensive = {
 				enabled = false,
@@ -28,8 +29,8 @@ data:extend(
 				enabled = false,
 				always_show_made_in = true,
 				ingredients = {
-					{"sct-t1-ironcore", 1},
-					{"sct-t1-magnet-coils", 2}
+					{type = "item", name = "sct-t1-ironcore", amount = 1},
+					{type = "item", name = "sct-t1-magnet-coils", amount = 2}
 				},
 				results = {
 					{type = "item", amount = 1, name = "automation-science-pack"}
@@ -48,6 +49,7 @@ data:extend(
 			name = "sct-logistic-science-pack",
 			subgroup = "sct-sciencepack-2",
 			order = "e[t2]-a[logistic-science-pack]",
+			icon = "__ScienceCostTweakerM__/graphics/icons/science-pack-2-64.png",
 --[[		
 			expensive = {
 				enabled = false,
@@ -67,14 +69,13 @@ data:extend(
 				enabled = false,
 				always_show_made_in = true,
 				ingredients = {
-					{"sct-t2-instruments", 1},
-					{"sct-t2-reaction-nodes", 1}
+					{type = "item", name = "sct-t2-instruments", amount = 1},
+					{type = "item", name = "sct-t2-reaction-nodes", amount = 1}
 				},
 				results = {
 					{type = "item", amount = 1, name = "logistic-science-pack"}
 				},
 				energy_required = 6,
-				enabled = false
 			}
 		}
 	}
@@ -103,18 +104,19 @@ data:extend(
 			name = "sct-chemical-science-pack",
 			subgroup = "sct-sciencepack-3",
 			order = "f[t3]-a[chemical-science-pack]",
+			icon = "__ScienceCostTweakerM__/graphics/icons/science-pack-3-64.png",
+			
 			normal = {
 				enabled = false,
 				always_show_made_in = true,
 				ingredients = {
-					{"sct-t3-femto-lasers", 1},
-					{"sct-t3-atomic-sensors", 1}
+					{type = "item", name = "sct-t3-femto-lasers", amount = 1},
+					{type = "item", name = "sct-t3-atomic-sensors", amount = 1}
 				},
 				results = {
 					{type = "item", amount = 1, name = "chemical-science-pack"}
 				},
 				energy_required = 10,
-				enabled = false
 			}
 		}
 	}
@@ -138,6 +140,7 @@ data:extend(
 		{
 			type = "recipe",
 			name = "sct-military-science-pack",
+			icon = "__ScienceCostTweakerM__/graphics/icons/military-science-pack-64.png",
 --[[
 			expensive = {
 				enabled = false,
@@ -157,15 +160,15 @@ data:extend(
 				enabled = false,
 				always_show_made_in = true,
 				ingredients = {
-					{"sct-mil-circuit3", 1},
-					{"sct-mil-plating", 1}
+					{type = "item", name = "sct-mil-circuit3", amount = 1},
+					{type = "item", name = "sct-mil-plating", amount = 1}
 				},
 				results = {
 					{type = "item", amount = 2, name = "military-science-pack"}
 				},
 				energy_required = 10,
-				enabled = false
 			},
+	
 			subgroup = "sct-sciencepack-mil",
 			order = "g[mil]-a[military-science-pack]"
 		}
@@ -190,6 +193,7 @@ data:extend(
 		{
 			type = "recipe",
 			name = "sct-production-science-pack",
+			icon = "__ScienceCostTweakerM__/graphics/icons/production-science-pack-64.png",
 --[[
 			expensive = {
 				always_show_made_in = true,
@@ -207,15 +211,16 @@ data:extend(
 			normal = {
 				always_show_made_in = true,
 				ingredients = {
-					{"sct-prod-bioprocessor", 1},
-					{"sct-prod-overclocker", 1}
+					{type = "item", name = "sct-prod-bioprocessor", amount = 1},
+					{type = "item", name = "sct-prod-overclocker", amount = 1}
 				},
 				results = {
 					{type = "item", amount = 2, name = "production-science-pack"}
 				},
 				energy_required = 14,
-				enabled = false
+				enabled = false,
 			},
+				
 			subgroup = "sct-sciencepack-prod",
 			order = "h[prod]-a[production-science-pack]"
 		}
@@ -240,6 +245,7 @@ data:extend(
 		{
 			type = "recipe",
 			name = "sct-utility-science-pack",
+			icon = "__ScienceCostTweakerM__/graphics/icons/high-tech-science-pack-64.png",
 --[[
 			expensive = {
 				always_show_made_in = true,
@@ -259,15 +265,16 @@ data:extend(
 				always_show_made_in = true,
 				enabled = false,
 				ingredients = {
-					{"sct-htech-capbank", 1},
-					{"sct-htech-injector", 1},
-					{"sct-htech-random", 1}
+					{type = "item", name = "sct-htech-capbank", amount = 1},
+					{type = "item", name = "sct-htech-injector", amount = 1},
+					{type = "item", name = "sct-htech-random", amount = 1}
 				},
 				results = {
 					{type = "item", amount = 2, name = "utility-science-pack"}
 				},
 				energy_required = 14,
 			},
+			
 			subgroup = "sct-sciencepack-hightech",
 			order = "i[ht]-a[ht-science-pack]"
 		}
