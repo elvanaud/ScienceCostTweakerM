@@ -25,7 +25,7 @@ data:extend({
 				{ type="item", name="copper-ore", amount=2 },
 			},
 			allow_decomposition = false,
-			hidden_from_stats = true,
+			hide_from_stats = true,
 		},
 		]]--
 		expensive =
@@ -41,23 +41,20 @@ data:extend({
 				{ type="item", name="copper-ore", amount=2 },
 			},
 			allow_decomposition = false,
-			hidden_from_stats = true,
+			hide_from_stats = true,
 		},
-		normal =
-		{
 			enabled = false,
 			energy_required = 0.5,
 			ingredients = 
 			{
-				{"sct-waste-copperonly", 2},
+				{type="item", name = "sct-waste-copperonly", amount = 2},
 			},
 			results = 
 			{
 				{ type="item", name="copper-ore", amount=2 },
 			},
 			allow_decomposition = false,
-			hidden_from_stats = true,
-		},
+			hide_from_stats = true,
 	},
 
 	{
@@ -83,7 +80,7 @@ data:extend({
 				{ type="item", name="iron-ore", amount=1 },
 			},
 			allow_decomposition = false,
-			hidden_from_stats = true,
+			hide_from_stats = true,
 		},
 		]]--
 		expensive = 
@@ -100,7 +97,7 @@ data:extend({
 				{ type="item", name="iron-ore", amount=1 },
 			},
 			allow_decomposition = false,
-			hidden_from_stats = true,
+			hide_from_stats = true,
 		},
 		normal =
 		{
@@ -116,7 +113,7 @@ data:extend({
 				{ type="item", name="iron-ore", amount=1 },
 			},
 			allow_decomposition = false,
-			hidden_from_stats = true,
+			hide_from_stats = true,
 		},
 	},
 
@@ -879,7 +876,7 @@ data:extend({
 			ingredients =
 			{
 				{type="item", name="sct-prod-baked-biopaste", amount=1},
-				{type="item", name="red-wire", amount=10},
+				{type="item", name="copper-cable", amount=10},
 				{type="item", name="processing-unit", amount=1}
 			},
 			results = 
@@ -896,7 +893,7 @@ data:extend({
 			ingredients =
 			{
 				{type="item", name="sct-prod-baked-biopaste", amount=1},
-				{type="item", name="red-wire", amount=6},
+				{type="item", name="copper-cable", amount=6},
 				{type="item", name="processing-unit", amount=1}
 			},
 			results = 
@@ -1062,7 +1059,7 @@ data:extend({
 			ingredients =
 			{
 				{type="item", name="plastic-bar", amount=10},
-				{type="item", name="green-wire", amount=8},
+				{type="item", name="copper-cable", amount=8},
 				{type="item", name="advanced-circuit", amount=1},
 				{type="fluid", name="heavy-oil", amount=250}
 			},
@@ -1080,7 +1077,7 @@ data:extend({
 			ingredients =
 			{
 				{type="item", name="plastic-bar", amount=5},
-				{type="item", name="green-wire", amount=5},
+				{type="item", name="copper-cable", amount=5},
 				{type="item", name="advanced-circuit", amount=1},
 				{type="fluid", name="heavy-oil", amount=120}
 			},
