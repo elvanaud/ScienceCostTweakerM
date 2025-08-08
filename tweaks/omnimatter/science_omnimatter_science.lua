@@ -90,33 +90,30 @@ if mods["omnimatter_science"] and mods["omnimatter_crystal"] then
 				},
 			},
 			]]--
-			expensive = 
+			-- expensive = 
+			-- {
+			-- 	enabled = false,
+			-- 	energy_required = 10,
+			-- 	ingredients = 
+			-- 	{
+			-- 		{ type="item", name="sct-omni-pack-tools", amount=1 },
+			-- 		{ type="item", name="sct-omni-pack-minerals", amount=1 },
+			-- 	},
+			-- 	results =
+			-- 	{
+			-- 		{ type="item", name="omni-pack", amount=2 },
+			-- 	},
+			-- },
+			enabled = false,
+			energy_required = 10,
+			ingredients = 
 			{
-				enabled = false,
-				energy_required = 10,
-				ingredients = 
-				{
-					{ type="item", name="sct-omni-pack-tools", amount=1 },
-					{ type="item", name="sct-omni-pack-minerals", amount=1 },
-				},
-				results =
-				{
-					{ type="item", name="omni-pack", amount=2 },
-				},
+				{ type="item", name="sct-omni-pack-tools", amount=1 },
+				{ type="item", name="sct-omni-pack-minerals", amount=1 },
 			},
-			normal = 
+			results =
 			{
-				enabled = false,
-				energy_required = 10,
-				ingredients = 
-				{
-					{ type="item", name="sct-omni-pack-tools", amount=1 },
-					{ type="item", name="sct-omni-pack-minerals", amount=1 },
-				},
-				results =
-				{
-					{ type="item", name="omni-pack", amount=2 },
-				},
+				{ type="item", name="omni-pack", amount=2 },
 			},
 		}
 	})
@@ -129,33 +126,30 @@ if mods["omnimatter_science"] and mods["omnimatter_crystal"] then
 			subgroup = "sct-omni-science-pack",
 			order = "e_a[omni]-b[minerals]",
 			category = "crafting-with-fluid",
-			expensive =
+			-- expensive =
+			-- {
+			-- 	enabled = false,
+			-- 	energy_required = 5,
+			-- 	ingredients =
+			-- 	{
+			-- 		{type="fluid", name="omniston", amount=80},
+			-- 		{"iron-ore-crystal", 4},
+			-- 	},
+			-- 	results = 
+			-- 	{
+			-- 		{type="item", name="sct-omni-pack-minerals", amount=1},
+			-- 	},
+			-- },
+			enabled = false,
+			energy_required = 3,
+			ingredients =
 			{
-				enabled = false,
-				energy_required = 5,
-				ingredients =
-				{
-					{type="fluid", name="omniston", amount=80},
-					{"iron-ore-crystal", 4},
-				},
-				results = 
-				{
-					{type="item", name="sct-omni-pack-minerals", amount=1},
-				},
+				{type="fluid", name="omniston", amount=20},
+				{type = "item", name = "iron-ore-crystal", amount = 2},
 			},
-			normal =
+			results = 
 			{
-				enabled = false,
-				energy_required = 3,
-				ingredients =
-				{
-					{type="fluid", name="omniston", amount=20},
-					{"iron-ore-crystal", 2,},
-				},
-				results = 
-				{
-					{type="item", name="sct-omni-pack-minerals", amount=1},
-				},
+				{type="item", name="sct-omni-pack-minerals", amount=1},
 			},
 		},
 		{
@@ -163,33 +157,30 @@ if mods["omnimatter_science"] and mods["omnimatter_crystal"] then
 			name = "sct-omni-pack-tools",
 			subgroup = "sct-omni-science-pack",
 			order = "e_a[omni]-c[tools]",
-			expensive =
+			-- expensive =
+			-- {
+			-- 	enabled = false,
+			-- 	energy_required = 5,
+			-- 	ingredients =
+			-- 	{
+			-- 		{"fast-transport-belt", 4},
+			-- 		{"fast-inserter", 4},
+			-- 	},
+			-- 	results = 
+			-- 	{
+			-- 		{type="item", name="sct-omni-pack-tools", amount=1},
+			-- 	},
+			-- },
+			enabled = false,
+			energy_required = 3,
+			ingredients =
 			{
-				enabled = false,
-				energy_required = 5,
-				ingredients =
-				{
-					{"fast-transport-belt", 4},
-					{"fast-inserter", 4},
-				},
-				results = 
-				{
-					{type="item", name="sct-omni-pack-tools", amount=1},
-				},
+				{type = "item", name = "fast-transport-belt", amount = 2},
+				{type = "item", name = "fast-inserter", amount = 2},
 			},
-			normal =
+			results = 
 			{
-				enabled = false,
-				energy_required = 3,
-				ingredients =
-				{
-					{"fast-transport-belt", 2},
-					{"fast-inserter", 2,},
-				},
-				results = 
-				{
-					{type="item", name="sct-omni-pack-tools", amount=1},
-				},
+				{type="item", name="sct-omni-pack-tools", amount=1},
 			},
 		},
 	})

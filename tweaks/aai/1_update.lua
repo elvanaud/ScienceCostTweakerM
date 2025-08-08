@@ -6,7 +6,7 @@ if mods["aai-industry"] then
 		"electricity",
 		"basic-fluid-handling",
 		"electric-mining",
-    "fuel-processing",
+        "fuel-processing",
 	}
 	if mods["omnimatter_water"] then
 		aaitech0[#aaitech0+1] = "omniwaste"

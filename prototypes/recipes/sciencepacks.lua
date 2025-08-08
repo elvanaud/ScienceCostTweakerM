@@ -25,18 +25,16 @@ data:extend(
 				energy_required = 12
 			},
 ]]--
-			normal = {
-				enabled = false,
-				always_show_made_in = true,
-				ingredients = {
-					{type = "item", name = "sct-t1-ironcore", amount = 1},
-					{type = "item", name = "sct-t1-magnet-coils", amount = 2}
-				},
-				results = {
-					{type = "item", amount = 1, name = "automation-science-pack"}
-				},
-				energy_required = 5
-			}
+			enabled = false,
+			always_show_made_in = true,
+			ingredients = {
+				{type = "item", name = "sct-t1-ironcore", amount = 1},
+				{type = "item", name = "sct-t1-magnet-coils", amount = 2}
+			},
+			results = {
+				{type = "item", amount = 1, name = "automation-science-pack"}
+			},
+			energy_required = 5
 		}
 	}
 )
@@ -65,18 +63,16 @@ data:extend(
 				enabled = false
 			},
 ]]--
-			normal = {
-				enabled = false,
-				always_show_made_in = true,
-				ingredients = {
-					{type = "item", name = "sct-t2-instruments", amount = 1},
-					{type = "item", name = "sct-t2-reaction-nodes", amount = 1}
-				},
-				results = {
-					{type = "item", amount = 1, name = "logistic-science-pack"}
-				},
-				energy_required = 6,
-			}
+			enabled = false,
+			always_show_made_in = true,
+			ingredients = {
+				{type = "item", name = "sct-t2-instruments", amount = 1},
+				{type = "item", name = "sct-t2-reaction-nodes", amount = 1}
+			},
+			results = {
+				{type = "item", amount = 1, name = "logistic-science-pack"}
+			},
+			energy_required = 6,
 		}
 	}
 )
@@ -106,18 +102,16 @@ data:extend(
 			order = "f[t3]-a[chemical-science-pack]",
 			icon = "__ScienceCostTweakerM__/graphics/icons/science-pack-3-64.png",
 			
-			normal = {
-				enabled = false,
-				always_show_made_in = true,
-				ingredients = {
-					{type = "item", name = "sct-t3-femto-lasers", amount = 1},
-					{type = "item", name = "sct-t3-atomic-sensors", amount = 1}
-				},
-				results = {
-					{type = "item", amount = 1, name = "chemical-science-pack"}
-				},
-				energy_required = 10,
-			}
+			enabled = false,
+			always_show_made_in = true,
+			ingredients = {
+				{type = "item", name = "sct-t3-femto-lasers", amount = 1},
+				{type = "item", name = "sct-t3-atomic-sensors", amount = 1}
+			},
+			results = {
+				{type = "item", amount = 1, name = "chemical-science-pack"}
+			},
+			energy_required = 10,
 		}
 	}
 )
@@ -156,18 +150,16 @@ data:extend(
 				enabled = false
 			},
 ]]--
-			normal = {
-				enabled = false,
-				always_show_made_in = true,
-				ingredients = {
-					{type = "item", name = "sct-mil-circuit3", amount = 1},
-					{type = "item", name = "sct-mil-plating", amount = 1}
-				},
-				results = {
-					{type = "item", amount = 2, name = "military-science-pack"}
-				},
-				energy_required = 10,
+			enabled = false,
+			always_show_made_in = true,
+			ingredients = {
+				{type = "item", name = "sct-mil-circuit3", amount = 1},
+				{type = "item", name = "sct-mil-plating", amount = 1}
 			},
+			results = {
+				{type = "item", amount = 2, name = "military-science-pack"}
+			},
+			energy_required = 10,
 	
 			subgroup = "sct-sciencepack-mil",
 			order = "g[mil]-a[military-science-pack]"
@@ -208,18 +200,16 @@ data:extend(
 				enabled = false
 			},
 ]]--
-			normal = {
-				always_show_made_in = true,
-				ingredients = {
-					{type = "item", name = "sct-prod-bioprocessor", amount = 1},
-					{type = "item", name = "sct-prod-overclocker", amount = 1}
-				},
-				results = {
-					{type = "item", amount = 2, name = "production-science-pack"}
-				},
-				energy_required = 14,
-				enabled = false,
+			always_show_made_in = true,
+			ingredients = {
+				{type = "item", name = "sct-prod-bioprocessor", amount = 1},
+				{type = "item", name = "sct-prod-overclocker", amount = 1}
 			},
+			results = {
+				{type = "item", amount = 2, name = "production-science-pack"}
+			},
+			energy_required = 14,
+			enabled = false,
 				
 			subgroup = "sct-sciencepack-prod",
 			order = "h[prod]-a[production-science-pack]"
@@ -261,19 +251,17 @@ data:extend(
 				enabled = false
 			},
 ]]--
-			normal = {
-				always_show_made_in = true,
-				enabled = false,
-				ingredients = {
-					{type = "item", name = "sct-htech-capbank", amount = 1},
-					{type = "item", name = "sct-htech-injector", amount = 1},
-					{type = "item", name = "sct-htech-random", amount = 1}
-				},
-				results = {
-					{type = "item", amount = 2, name = "utility-science-pack"}
-				},
-				energy_required = 14,
+			always_show_made_in = true,
+			enabled = false,
+			ingredients = {
+				{type = "item", name = "sct-htech-capbank", amount = 1},
+				{type = "item", name = "sct-htech-injector", amount = 1},
+				{type = "item", name = "sct-htech-random", amount = 1}
 			},
+			results = {
+				{type = "item", amount = 2, name = "utility-science-pack"}
+			},
+			energy_required = 14,
 			
 			subgroup = "sct-sciencepack-hightech",
 			order = "i[ht]-a[ht-science-pack]"
@@ -291,11 +279,11 @@ local sctpacks = {
 --    "sct-space-science-pack",
 }
 
-for _, stp in pairs(sctpacks) do
-	data.raw.recipe[stp].expensive = table.deepcopy(data.raw.recipe[stp].normal)
-end
+-- for _, stp in pairs(sctpacks) do
+-- 	data.raw.recipe[stp].expensive = table.deepcopy(data.raw.recipe[stp].normal)
+-- end
 
 if settings.startup["sct-military"].value == "tier3" then
-	data.raw.recipe["sct-military-science-pack"].normal.energy_required = 14
-	data.raw.recipe["sct-military-science-pack"].expensive.energy_required = 14
+	data.raw.recipe["sct-military-science-pack"].energy_required = 14
+	--data.raw.recipe["sct-military-science-pack"].expensive.energy_required = 14
 end

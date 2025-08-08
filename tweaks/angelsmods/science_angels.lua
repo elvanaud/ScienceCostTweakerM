@@ -65,35 +65,33 @@ if mods["angelsbioprocessing"] then
       order = "d_a[bio]",
       icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-bio-science-pack-64.png",
       icon_size = 64,
-      expensive =
-      {
-        enabled = false,
-        always_show_made_in = true,
-        energy_required = 5,
-        ingredients =
-        {
-          {"sct-bio-ground-sample", 1},
-          {"token-bio", 1},
-        },
-        results = 
-        {
-          {type="item", name="sct-bio-science-pack", amount=1},
-        },
-      },
+      -- expensive =
+      -- {
+      --   enabled = false,
+      --   always_show_made_in = true,
+      --   energy_required = 5,
+      --   ingredients =
+      --   {
+      --     {"sct-bio-ground-sample", 1},
+      --     {"angels-token-bio", 1},
+      --   },
+      --   results = 
+      --   {
+      --     {type="item", name="sct-bio-science-pack", amount=1},
+      --   },
+      -- },
       
-      normal = {
-        enabled = false,
-        always_show_made_in = true,
-        energy_required = 5,
-        ingredients =
-        {
-          {type = "item", name = "sct-bio-ground-sample", amount = 1},
-          {type = "item", name = "token-bio", amount = 1},
-        },
-        results = 
-        {
-          {type="item", name="sct-bio-science-pack", amount=1},
-        },
+      enabled = false,
+      always_show_made_in = true,
+      energy_required = 5,
+      ingredients =
+      {
+        {type = "item", name = "sct-bio-ground-sample", amount = 1},
+        {type = "item", name = "angels-token-bio", amount = 1},
+      },
+      results = 
+      {
+        {type="item", name="sct-bio-science-pack", amount=1},
       },
     },
     
@@ -104,33 +102,30 @@ if mods["angelsbioprocessing"] then
       order = "d_a[bio]-b[groundsample]",
       icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-bio-ground-sample.png",
       icon_size = 32,
-      expensive =
+      -- expensive =
+      -- {
+      --   enabled = false,
+      --   energy_required = 10,
+      --   ingredients =
+      --   {
+      --     {"sct-bio-sample-scaffold", 2},
+      --     {"sct-bio-sample-filling", 1},
+      --   },
+      --   results = 
+      --   {
+      --     {type="item", name="sct-bio-ground-sample", amount=1},
+      --   },
+      -- },
+      enabled = false,
+      energy_required = 5,
+      ingredients =
       {
-        enabled = false,
-        energy_required = 10,
-        ingredients =
-        {
-          {"sct-bio-sample-scaffold", 2},
-          {"sct-bio-sample-filling", 1},
-        },
-        results = 
-        {
-          {type="item", name="sct-bio-ground-sample", amount=1},
-        },
+        {type = "item", name = "sct-bio-sample-scaffold", amount = 1},
+        {type = "item", name = "sct-bio-sample-filling", amount = 1},
       },
-      normal =
+      results = 
       {
-        enabled = false,
-        energy_required = 5,
-        ingredients =
-        {
-          {"sct-bio-sample-scaffold", 1},
-          {"sct-bio-sample-filling", 1},
-        },
-        results = 
-        {
-          {type="item", name="sct-bio-ground-sample", amount=1},
-        },
+        {type="item", name="sct-bio-ground-sample", amount=1},
       },
     },
     
@@ -141,33 +136,30 @@ if mods["angelsbioprocessing"] then
       order = "d_a[bio]-c[scaffold]",
       icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-bio-sample-scaffold.png",
       icon_size = 32,
-      expensive =
+      -- expensive =
+      -- {
+      --   enabled = false,
+      --   energy_required = 4,
+      --   ingredients =
+      --   {
+      --     {"wood", 2},
+      --     {"angels-solid-paper", 4},
+      --   },
+      --   results = 
+      --   {
+      --     {type="item", name="sct-bio-sample-scaffold", amount=1},
+      --   },
+      -- },
+      enabled = false,
+      energy_required = 2,
+      ingredients =
       {
-        enabled = false,
-        energy_required = 4,
-        ingredients =
-        {
-          {"wood", 2},
-          {"solid-paper", 4},
-        },
-        results = 
-        {
-          {type="item", name="sct-bio-sample-scaffold", amount=1},
-        },
+        {type = "item", name = "wood", amount = 1},
+        {type = "item", name = "angels-solid-paper", amount = 2},
       },
-      normal =
+      results = 
       {
-        enabled = false,
-        energy_required = 2,
-        ingredients =
-        {
-          {"wood", 1},
-          {"solid-paper", 2},
-        },
-        results = 
-        {
-          {type="item", name="sct-bio-sample-scaffold", amount=1},
-        },
+        {type="item", name="sct-bio-sample-scaffold", amount=1},
       },
     },
 
@@ -176,38 +168,35 @@ if mods["angelsbioprocessing"] then
       name = "sct-bio-sample-filling",
       subgroup = "sct-bio-science-pack",
       order = "d_a[bio]-d[filling]",
-      category = "liquifying",
+      category = "angels-liquifying",
       icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-bio-sample-filling.png",
       icon_size = 32,
-      expensive =
+      -- expensive =
+      -- {
+      --   enabled = false,
+      --   energy_required = 4,
+      --   ingredients =
+      --   {
+      --     {"angels-solid-soil", 2},
+      --     {"angels-solid-compost", 4},
+      --     {type="fluid", name="water", amount=200},
+      --   },
+      --   results = 
+      --   {
+      --     {type="item", name="sct-bio-sample-filling", amount=1},
+      --   },
+      -- },
+      enabled = false,
+      energy_required = 2,
+      ingredients =
       {
-        enabled = false,
-        energy_required = 4,
-        ingredients =
-        {
-          {"solid-soil", 2},
-          {"solid-compost", 4},
-          {type="fluid", name="water", amount=200},
-        },
-        results = 
-        {
-          {type="item", name="sct-bio-sample-filling", amount=1},
-        },
+        {type = "item", name = "angels-solid-soil", amount = 1},
+        {type = "item", name = "angels-solid-compost", amount = 2},
+        {type="fluid", name="water", amount=100},
       },
-      normal =
+      results = 
       {
-        enabled = false,
-        energy_required = 2,
-        ingredients =
-        {
-          {"solid-soil", 1},
-          {"solid-compost", 2},
-          {type="fluid", name="water", amount=100},
-        },
-        results = 
-        {
-          {type="item", name="sct-bio-sample-filling", amount=1},
-        },
+        {type="item", name="sct-bio-sample-filling", amount=1},
       },
     },
   })
@@ -240,8 +229,8 @@ if mods["angelsbioprocessing"] then
       },
       prerequisites =
       {
-        "gardens",
-        "bio-paper-1",
+        "angels-gardens",
+        "angels-bio-paper-1",
       },
       unit =
       {

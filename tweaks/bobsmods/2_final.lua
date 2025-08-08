@@ -1,7 +1,7 @@
 if mods["bobtech"] then
 	sctm.tech_pack_add("sct-space-science-pack", {"bob-advanced-logistic-science-pack", 5})
   if mods["angelspetrochem"] then
-    sctm.recipe_ingredient_remove("chemical-science-pack", "solid-sodium-hydroxide")
+    sctm.recipe_ingredient_remove("chemical-science-pack", "angels-solid-sodium-hydroxide")
     sctm.recipe_ingredient_remove("production-science-pack", "angels-chemical-plant")
   else
     sctm.recipe_ingredient_remove("chemical-science-pack", "bob-sodium-hydroxide")

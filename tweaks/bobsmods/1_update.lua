@@ -58,18 +58,18 @@ if mods["bobplates"] then
   end
   
   if data.raw.item["bob-glass"] and data.raw.item["bob-silver-plate"] then
-    data.raw.recipe["sct-t3-laser-foci"].normal.ingredients =
+    data.raw.recipe["sct-t3-laser-foci"].ingredients =
     {
       {type="item", name="copper-plate", amount=5},
       {type="item", name="bob-glass", amount=8},
       {type="item", name="bob-silver-plate", amount=2}
     }
-    data.raw.recipe["sct-t3-laser-foci"].expensive.ingredients =
-    {
-      {type="item", name="copper-plate", amount=10},
-      {type="item", name="bob-glass", amount=15},
-      {type="item", name="bob-silver-plate", amount=5}
-    }
+    -- data.raw.recipe["sct-t3-laser-foci"].expensive.ingredients =
+    -- {
+    --   {type="item", name="copper-plate", amount=10},
+    --   {type="item", name="bob-glass", amount=15},
+    --   {type="item", name="bob-silver-plate", amount=5}
+    -- }
     if mods["angelssmelting"] then
       sctm.tech_dependency_add("sct-lab-t3", "angels-silver-smelting-1")
     elseif mods["angelsrefining"] then
@@ -83,30 +83,30 @@ if mods["bobplates"] then
   end
 
   if data.raw.item["bob-glass"] and data.raw.item["bob-aluminium-plate"] then
-    data.raw.recipe["sct-t3-laser-emitter"].normal.ingredients =
+    data.raw.recipe["sct-t3-laser-emitter"].ingredients =
     {
       {type="item", name="electronic-circuit", amount=6},
       {type="item", name="copper-plate", amount=8},
       {type="item", name="bob-glass", amount=4},
       {type="item", name="bob-aluminium-plate", amount=5}
     }
-    data.raw.recipe["sct-t3-laser-emitter"].normal.results = 
+    data.raw.recipe["sct-t3-laser-emitter"].results = 
     {
       {type="item", name="sct-t3-laser-emitter", amount=1},
       {type="item", name="sct-waste-copperonly", amount=1}
     }
-    data.raw.recipe["sct-t3-laser-emitter"].expensive.ingredients =
-    {
-      {type="item", name="electronic-circuit", amount=10},
-      {type="item", name="copper-plate", amount=15},
-      {type="item", name="bob-glass", amount=6},
-      {type="item", name="bob-aluminium-plate", amount=10}
-    }
-    data.raw.recipe["sct-t3-laser-emitter"].expensive.results = 
-    {
-      {type="item", name="sct-t3-laser-emitter", amount=1},
-      {type="item", name="sct-waste-copperonly", amount=1}
-    }
+    -- data.raw.recipe["sct-t3-laser-emitter"].expensive.ingredients =
+    -- {
+    --   {type="item", name="electronic-circuit", amount=10},
+    --   {type="item", name="copper-plate", amount=15},
+    --   {type="item", name="bob-glass", amount=6},
+    --   {type="item", name="bob-aluminium-plate", amount=10}
+    -- }
+    -- data.raw.recipe["sct-t3-laser-emitter"].expensive.results = 
+    -- {
+    --   {type="item", name="sct-t3-laser-emitter", amount=1},
+    --   {type="item", name="sct-waste-copperonly", amount=1}
+    -- }
     if mods["angelssmelting"] then
       sctm.tech_dependency_add("sct-lab-t3", "angels-aluminium-smelting-1")
       sctm.tech_dependency_add("sct-lab-t3", "angels-glass-smelting-1")
@@ -116,7 +116,7 @@ if mods["bobplates"] then
   end
   
   if data.raw.item["bob-silver-plate"] and data.raw.item["bob-aluminium-plate"] and data.raw.fluid["bob-nitrogen"] then
-    data.raw.recipe["sct-t3-atomic-sensors"].normal.ingredients =
+    data.raw.recipe["sct-t3-atomic-sensors"].ingredients =
     {
       {type="item", name="advanced-circuit", amount=1},
       {type="item", name="bob-aluminium-plate", amount=5},
@@ -124,24 +124,24 @@ if mods["bobplates"] then
       {type="item", name="copper-plate", amount=12},
       {type="fluid", name="bob-nitrogen", amount=15}
     }
-    data.raw.recipe["sct-t3-atomic-sensors"].normal.results = 
+    data.raw.recipe["sct-t3-atomic-sensors"].results = 
     {
       {type="item", name="sct-t3-atomic-sensors", amount=1},
       {type="item", name="sct-waste-copperonly", amount=1}
     }
-    data.raw.recipe["sct-t3-atomic-sensors"].expensive.ingredients =
-    {
-      {type="item", name="advanced-circuit", amount=1},
-      {type="item", name="bob-aluminium-plate", amount=10},
-      {type="item", name="bob-silver-plate", amount=5},
-      {type="item", name="copper-plate", amount=20},
-      {type="fluid", name="bob-nitrogen", amount=30}
-    }
-    data.raw.recipe["sct-t3-atomic-sensors"].expensive.results = 
-    {
-      {type="item", name="sct-t3-atomic-sensors", amount=1},
-      {type="item", name="sct-waste-copperonly", amount=1}
-    }
+    -- data.raw.recipe["sct-t3-atomic-sensors"].expensive.ingredients =
+    -- {
+    --   {type="item", name="advanced-circuit", amount=1},
+    --   {type="item", name="bob-aluminium-plate", amount=10},
+    --   {type="item", name="bob-silver-plate", amount=5},
+    --   {type="item", name="copper-plate", amount=20},
+    --   {type="fluid", name="bob-nitrogen", amount=30}
+    -- }
+    -- data.raw.recipe["sct-t3-atomic-sensors"].expensive.results = 
+    -- {
+    --   {type="item", name="sct-t3-atomic-sensors", amount=1},
+    --   {type="item", name="sct-waste-copperonly", amount=1}
+    -- }
     sctm.tech_dependency_remove("chemical-science-pack", "bob-alloy-processing")
   end
   
@@ -178,7 +178,7 @@ if mods["bobplates"] then
   -- Production Science Pack:
   -- =============================
   if data.raw.item["bob-tin-plate"] and data.raw.item["bob-lead-plate"] and data.raw.item["bob-gold-plate"] and data.raw.fluid["bob-sulfur-dioxide"] then
-    data.raw.recipe["sct-prod-overclocker"].normal.ingredients = 
+    data.raw.recipe["sct-prod-overclocker"].ingredients = 
     {
       {type="item", name="bob-tin-plate", amount=10},
       {type="item", name="bob-lead-plate", amount=10},
@@ -186,54 +186,54 @@ if mods["bobplates"] then
       {type="item", name="sct-prod-chipcase", amount=1},
       {type="fluid", name="bob-sulfur-dioxide", amount=120},
     }
-    data.raw.recipe["sct-prod-overclocker"].normal.results = 
+    data.raw.recipe["sct-prod-overclocker"].results = 
     {
       {type="item", name="sct-prod-overclocker", amount=1},
       {type="item", name="sulfur", amount=4}
     }
-    data.raw.recipe["sct-prod-overclocker"].expensive.ingredients = 
-    {
-      {type="item", name="bob-tin-plate", amount=20},
-      {type="item", name="bob-lead-plate", amount=20},
-      {type="item", name="bob-gold-plate", amount=20},
-      {type="item", name="sct-prod-chipcase", amount=1},
-      {type="fluid", name="bob-sulfur-dioxide", amount=200},
-    }
-    data.raw.recipe["sct-prod-overclocker"].expensive.results = 
-    {
-      {type="item", name="sct-prod-overclocker", amount=1},
-      {type="item", name="sulfur", amount=4}
-    }
+    -- data.raw.recipe["sct-prod-overclocker"].expensive.ingredients = 
+    -- {
+    --   {type="item", name="bob-tin-plate", amount=20},
+    --   {type="item", name="bob-lead-plate", amount=20},
+    --   {type="item", name="bob-gold-plate", amount=20},
+    --   {type="item", name="sct-prod-chipcase", amount=1},
+    --   {type="fluid", name="bob-sulfur-dioxide", amount=200},
+    -- }
+    -- data.raw.recipe["sct-prod-overclocker"].expensive.results = 
+    -- {
+    --   {type="item", name="sct-prod-overclocker", amount=1},
+    --   {type="item", name="sulfur", amount=4}
+    -- }
     sctm.tech_dependency_add("sct-production-science-pack", "bob-gold-processing")
   end
   if data.raw.item["bob-insulated-cable"] then
-    data.raw.recipe["sct-prod-bioprocessor"].normal.ingredients = 
+    data.raw.recipe["sct-prod-bioprocessor"].ingredients = 
     {
       {type="item", name="sct-prod-baked-biopaste", amount=1},
 	  	{type="item", name="bob-insulated-cable", amount=6},
 	  	{type="item", name="processing-unit", amount=1}
     }
-    data.raw.recipe["sct-prod-bioprocessor"].expensive.ingredients = 
-    {
-      {type="item", name="sct-prod-baked-biopaste", amount=1},
-	  	{type="item", name="bob-insulated-cable", amount=10},
-	  	{type="item", name="processing-unit", amount=1}
-    }
+    -- data.raw.recipe["sct-prod-bioprocessor"].expensive.ingredients = 
+    -- {
+    --   {type="item", name="sct-prod-baked-biopaste", amount=1},
+	  -- 	{type="item", name="bob-insulated-cable", amount=10},
+	  -- 	{type="item", name="processing-unit", amount=1}
+    -- }
     
-    data.raw.recipe["sct-prod-chipcase"].normal.ingredients = 
+    data.raw.recipe["sct-prod-chipcase"].ingredients = 
     {
       {type="item", name="plastic-bar", amount=5},
       {type="item", name="bob-insulated-cable", amount=5},
       {type="item", name="advanced-circuit", amount=1},
       {type="fluid", name="heavy-oil", amount=120}
     }
-    data.raw.recipe["sct-prod-chipcase"].expensive.ingredients = 
-    {
-      {type="item", name="plastic-bar", amount=10},
-      {type="item", name="bob-insulated-cable", amount=8},
-      {type="item", name="advanced-circuit", amount=1},
-      {type="fluid", name="heavy-oil", amount=250}
-    }
+    -- data.raw.recipe["sct-prod-chipcase"].expensive.ingredients = 
+    -- {
+    --   {type="item", name="plastic-bar", amount=10},
+    --   {type="item", name="bob-insulated-cable", amount=8},
+    --   {type="item", name="advanced-circuit", amount=1},
+    --   {type="fluid", name="heavy-oil", amount=250}
+    -- }
   end
 
   -- High-Tech Science Pack:
@@ -249,7 +249,7 @@ if mods["bobplates"] then
   end
   
   if data.raw.item["bob-titanium-plate"] and data.raw.item["bob-powdered-tungsten"] and data.raw.item["bob-ruby-5"] then
-    data.raw.recipe["sct-htech-injector"].normal.ingredients =
+    data.raw.recipe["sct-htech-injector"].ingredients =
     {
       {type="item", name="copper-cable", amount=20},
       {type="item", name="processing-unit", amount=5},
@@ -257,14 +257,14 @@ if mods["bobplates"] then
       {type="item", name="bob-powdered-tungsten", amount=20},
       {type="item", name="bob-ruby-5", amount=1}
     }
-    data.raw.recipe["sct-htech-injector"].expensive.ingredients =
-    {
-      {type="item", name="copper-cable", amount=30},
-      {type="item", name="processing-unit", amount=10},
-      {type="item", name="bob-titanium-plate", amount=40},
-      {type="item", name="bob-powdered-tungsten", amount=40},
-      {type="item", name="bob-ruby-5", amount=1}
-    }
+    -- data.raw.recipe["sct-htech-injector"].expensive.ingredients =
+    -- {
+    --   {type="item", name="copper-cable", amount=30},
+    --   {type="item", name="processing-unit", amount=10},
+    --   {type="item", name="bob-titanium-plate", amount=40},
+    --   {type="item", name="bob-powdered-tungsten", amount=40},
+    --   {type="item", name="bob-ruby-5", amount=1}
+    -- }
     sctm.tech_dependency_add("sct-lab-t4", "bob-gem-processing-3")
     sctm.tech_dependency_add("sct-lab-t4", "bob-titanium-processing")
     sctm.tech_dependency_add("sct-lab-t4", "bob-tungsten-processing")
@@ -285,16 +285,16 @@ if mods["bobplates"] then
   end
 
   if data.raw.item["bob-tungsten-plate"] and data.raw.item["bob-cobalt-steel-alloy"] then
-    data.raw.recipe["sct-htech-thermalstore"].normal.ingredients =
+    data.raw.recipe["sct-htech-thermalstore"].ingredients =
     {
       {type="item", name="bob-tungsten-plate", amount=20},
       {type="item", name="bob-cobalt-steel-alloy", amount=20}
     }
-    data.raw.recipe["sct-htech-thermalstore"].expensive.ingredients =
-    {
-      {type="item", name="bob-tungsten-plate", amount=40},
-      {type="item", name="bob-cobalt-steel-alloy", amount=40}
-    }
+    -- data.raw.recipe["sct-htech-thermalstore"].expensive.ingredients =
+    -- {
+    --   {type="item", name="bob-tungsten-plate", amount=40},
+    --   {type="item", name="bob-cobalt-steel-alloy", amount=40}
+    -- }
     if mods["angelssmelting"] then
       sctm.tech_dependency_add("sct-utility-science-pack", "angels-cobalt-steel-smelting-1")
     end

@@ -90,18 +90,18 @@ function sctm.tech_dependency_remove(techname, depname)
 	if data.raw.technology[techname] then
 		local tech = data.raw.technology[techname]
 		local hasdiff = false
-		if tech.normal then
-			if tech.normal.prerequisites then
-				removed = removeprereq(tech.normal.prerequisites, depname)
-				hasdiff = true
-			end
-		end
-		if tech.expensive then
-			if tech.expensive.prerequisites then
-				removed = removeprereq(tech.expensive.prerequisites, depname) or removed
-				hasdiff = true
-			end
-		end
+		-- if tech.normal then
+		-- 	if tech.normal.prerequisites then
+		-- 		removed = removeprereq(tech.normal.prerequisites, depname)
+		-- 		hasdiff = true
+		-- 	end
+		-- end
+		-- if tech.expensive then
+		-- 	if tech.expensive.prerequisites then
+		-- 		removed = removeprereq(tech.expensive.prerequisites, depname) or removed
+		-- 		hasdiff = true
+		-- 	end
+		-- end
 		if not hasdiff and tech.prerequisites then
 			removed = removeprereq(tech.prerequisites, depname) or removed
 		end
@@ -137,20 +137,20 @@ function sctm.tech_dependency_add(techname, depname, hidden)
 		data.raw.technology[depname] and (data.raw.technology[depname].enabled or true) and (not (data.raw.technology[depname].hidden or false) or addhidden) then
 		local tech = data.raw.technology[techname]
 		local hasdiff = false
-		if tech.normal then
-			if not tech.normal.prerequisites then
-				tech.normal.prerequisites = {}
-			end
-			added = addprereq(tech.normal.prerequisites, depname)
-			hasdiff = true
-		end
-		if tech.expensive then
-			if not tech.expensive.prerequisites then
-				tech.expensive.prerequisites = {}
-			end
-			added = addprereq(tech.expensive.prerequisites, depname) or added
-			hasdiff = true
-		end
+		-- if tech.normal then
+		-- 	if not tech.normal.prerequisites then
+		-- 		tech.normal.prerequisites = {}
+		-- 	end
+		-- 	added = addprereq(tech.normal.prerequisites, depname)
+		-- 	hasdiff = true
+		-- end
+		-- if tech.expensive then
+		-- 	if not tech.expensive.prerequisites then
+		-- 		tech.expensive.prerequisites = {}
+		-- 	end
+		-- 	added = addprereq(tech.expensive.prerequisites, depname) or added
+		-- 	hasdiff = true
+		-- end
 		if not hasdiff then
 			if not tech.prerequisites then
 				tech.prerequisites = {}
@@ -173,16 +173,16 @@ function sctm.tech_dependency_get(techname)
 	sctm.debug("retrieving dps for " .. techname)
 	if data.raw.technology[techname] then
 		local tech = data.raw.technology[techname]
-		if tech.normal and tech.normal.prerequisites then
-			for _i, prereq in pairs(tech.normal.prerequisites) do
-				table.insert(deps, prereq)
-			end
-		end
-		if tech.expensive and tech.expensive.prerequisites then
-			for _i, prereq in pairs(tech.expensive.prerequisites) do
-				table.insert(deps, prereq)
-			end
-		end
+		-- if tech.normal and tech.normal.prerequisites then
+		-- 	for _i, prereq in pairs(tech.normal.prerequisites) do
+		-- 		table.insert(deps, prereq)
+		-- 	end
+		-- end
+		-- if tech.expensive and tech.expensive.prerequisites then
+		-- 	for _i, prereq in pairs(tech.expensive.prerequisites) do
+		-- 		table.insert(deps, prereq)
+		-- 	end
+		-- end
 		if tech.prerequisites then
 			for _i, prereq in pairs(tech.prerequisites) do
 				table.insert(deps, prereq)
@@ -212,18 +212,18 @@ function sctm.tech_pack_remove(techname, packname)
 	if data.raw.technology[techname] then
 		local tech = data.raw.technology[techname]
 		local hasdiff = false
-		if tech.normal then
-			if tech.normal.unit and tech.normal.unit.ingredients then
-				removed = rempack(tech.normal.unit.ingredients, packname)
-			end
-			hasdiff = true
-		end
-		if tech.expensive then
-			if tech.expensive.unit and tech.expensive.unit.ingredients then
-				removed = rempack(tech.expensive.unit.ingredients, packname) or removed
-			end
-			hasdiff = true
-		end
+		-- if tech.normal then
+		-- 	if tech.normal.unit and tech.normal.unit.ingredients then
+		-- 		removed = rempack(tech.normal.unit.ingredients, packname)
+		-- 	end
+		-- 	hasdiff = true
+		-- end
+		-- if tech.expensive then
+		-- 	if tech.expensive.unit and tech.expensive.unit.ingredients then
+		-- 		removed = rempack(tech.expensive.unit.ingredients, packname) or removed
+		-- 	end
+		-- 	hasdiff = true
+		-- end
 		if not hasdiff then
 			if tech.unit and tech.unit.ingredients then
 				removed = rempack(tech.unit.ingredients, packname) 
@@ -251,7 +251,7 @@ local function addpack(ingredientstable, newpack)
 		ingredientstable[ingredientsize + 1] = newpack
 		added = true
 	end
-	return addedd
+	return added
 end
 
 function sctm.tech_pack_add(techname, packnormal, packexpensive)
@@ -265,24 +265,24 @@ function sctm.tech_pack_add(techname, packnormal, packexpensive)
 	if data.raw.technology[techname] and data.raw.tool[normal[1]] then
 		local tech = data.raw.technology[techname]
 		local hasdiff = false
-		if tech.normal then
-			if tech.normal.unit then
-				if not tech.normal.unit.ingredients then
-					tech.normal.ingredients = {}
-				end
-				added = addpack(tech.normal.unit.ingredients, normal)
-			end
-			hasdiff = true
-		end
-		if tech.expensive then
-			if tech.expensive.unit then
-				if not tech.expensive.unit.ingredients then
-					tech.expensive.unit.ingredients = {}
-				end
-				added = addpack(tech.expensive.unit.ingredients, expensive) or added
-			end
-			hasdiff = true
-		end
+		-- if tech.normal then
+		-- 	if tech.normal.unit then
+		-- 		if not tech.normal.unit.ingredients then
+		-- 			tech.normal.ingredients = {}
+		-- 		end
+		-- 		added = addpack(tech.normal.unit.ingredients, normal)
+		-- 	end
+		-- 	hasdiff = true
+		-- end
+		-- if tech.expensive then
+		-- 	if tech.expensive.unit then
+		-- 		if not tech.expensive.unit.ingredients then
+		-- 			tech.expensive.unit.ingredients = {}
+		-- 		end
+		-- 		added = addpack(tech.expensive.unit.ingredients, expensive) or added
+		-- 	end
+		-- 	hasdiff = true
+		-- end
 		if not hasdiff or not added then
 			if tech.unit then
 				if not tech.unit.ingredients then
@@ -324,18 +324,18 @@ function sctm.tech_pack_replace(techname, oldpackname, newpackname)
 	if data.raw.technology[techname] and data.raw.tool[newpackname] then
 		local tech = data.raw.technology[techname]
 		local hasdiff = false
-		if tech.normal then
-			if tech.normal.unit and tech.normal.unit.ingredients then
-				replaced = replacepack(tech.normal.unit.ingredients, oldpackname, newpackname)
-			end
-			hasdiff = true
-		end
-		if tech.expensive then
-			if tech.expensive.unit and tech.expensive.unit.ingredients then
-				replaced = replacepack(tech.expensive.unit.ingredients, oldpackname, newpackname) or replaced
-			end
-			hasdiff = true
-		end
+		-- if tech.normal then
+		-- 	if tech.normal.unit and tech.normal.unit.ingredients then
+		-- 		replaced = replacepack(tech.normal.unit.ingredients, oldpackname, newpackname)
+		-- 	end
+		-- 	hasdiff = true
+		-- end
+		-- if tech.expensive then
+		-- 	if tech.expensive.unit and tech.expensive.unit.ingredients then
+		-- 		replaced = replacepack(tech.expensive.unit.ingredients, oldpackname, newpackname) or replaced
+		-- 	end
+		-- 	hasdiff = true
+		-- end
 		if not hasdiff or not replaced then
 			if tech.unit and tech.unit.ingredients then
 				replaced = replacepack(tech.unit.ingredients, oldpackname, newpackname) 
@@ -372,20 +372,20 @@ function sctm.tech_unlock_add(techname, recipename)
 	if data.raw.recipe[recipename] and data.raw.technology[techname] then
 		local tech = data.raw.technology[techname]
 		local hasdiff = false
-		if tech.normal then
-			if not tech.normal.effects then
-				tech.normal.effects = {}
-			end
-			addunlock(tech.normal.effects, recipename)
-			hasdiff = true
-		end
-		if tech.expensive then
-			if not tech.expensive.effects then
-				tech.expensive.effects = {}
-			end
-			addunlock(tech.expensive.effects, recipename)
-			hasdiff = true
-		end
+		-- if tech.normal then
+		-- 	if not tech.normal.effects then
+		-- 		tech.normal.effects = {}
+		-- 	end
+		-- 	addunlock(tech.normal.effects, recipename)
+		-- 	hasdiff = true
+		-- end
+		-- if tech.expensive then
+		-- 	if not tech.expensive.effects then
+		-- 		tech.expensive.effects = {}
+		-- 	end
+		-- 	addunlock(tech.expensive.effects, recipename)
+		-- 	hasdiff = true
+		-- end
 		if not hasdiff then
 			if not tech.effects then
 				tech.effects = {}
@@ -419,18 +419,18 @@ function sctm.tech_unlock_remove(techname, recipename)
 	if data.raw.technology[techname] then
 		local tech = data.raw.technology[techname]
 		local hasdiff = false
-		if tech.normal then
-			if tech.normal.effects then
-				removed = removeunlock(tech.normal.effects, recipename)
-			end
-			hasdiff = true
-		end
-		if tech.expensive then
-			if tech.expensive.effects then
-				removed = removeunlock(tech.expensive.effects, recipename) or removed
-			end
-			hasdiff = true
-		end
+		-- if tech.normal then
+		-- 	if tech.normal.effects then
+		-- 		removed = removeunlock(tech.normal.effects, recipename)
+		-- 	end
+		-- 	hasdiff = true
+		-- end
+		-- if tech.expensive then
+		-- 	if tech.expensive.effects then
+		-- 		removed = removeunlock(tech.expensive.effects, recipename) or removed
+		-- 	end
+		-- 	hasdiff = true
+		-- end
 		if not hasdiff then
 			if tech.effects then
 				removed = removeunlock(tech.effects, recipename)
@@ -473,18 +473,18 @@ function sctm.tech_remove_known_packs(techname, packlist)
 	if data.raw.technology[techname] then
 		local hasdif = false
 		local tech = data.raw.technology[techname]
-		if tech.expensive then
-			hasdif = true
-			if tech.expensive.effects and table_size(tech.expensive.effects) then
-				removed = removeknownpacks(tech.expensive.effects, packlist, techname)
-			end
-		end
-		if tech.normal then
-			hasdif = true
-			if tech.normal.effects and table_size(tech.normal.effects) then
-				removed = removeknownpacks(tech.normal.effects, packlist, techname) and removed
-			end
-		end
+		-- if tech.expensive then
+		-- 	hasdif = true
+		-- 	if tech.expensive.effects and table_size(tech.expensive.effects) then
+		-- 		removed = removeknownpacks(tech.expensive.effects, packlist, techname)
+		-- 	end
+		-- end
+		-- if tech.normal then
+		-- 	hasdif = true
+		-- 	if tech.normal.effects and table_size(tech.normal.effects) then
+		-- 		removed = removeknownpacks(tech.normal.effects, packlist, techname) and removed
+		-- 	end
+		-- end
 		if not hasdif and tech.effects and table_size(tech.effects) then
 			removed = removeknownpacks(tech.effects, packlist, techname)
 		end
@@ -556,21 +556,25 @@ function sctm.recipe_ingredient_remove(recipename, ingredientname)
 	if data.raw.recipe[recipename] then
 		local recipe = data.raw.recipe[recipename]
 		local hasdiff = false
-		if recipe.normal then
-			if recipe.normal.ingredients then
-				removed = removeingredient(recipe.normal.ingredients, ingredientname)
-			end
-			hasdiff = true
-		end
-		if recipe.expensive then
-			if recipe.expensive.ingredients then
-				removed = removeingredient(recipe.expensive.ingredients, ingredientname) or removed
-			end
-			hasdiff = true
-		end
+		-- if recipe.normal then
+		-- 	if recipe.normal.ingredients then
+		-- 		removed = removeingredient(recipe.normal.ingredients, ingredientname)
+		-- 	end
+		-- 	hasdiff = true
+		-- end
+		-- if recipe.expensive then
+		-- 	if recipe.expensive.ingredients then
+		-- 		removed = removeingredient(recipe.expensive.ingredients, ingredientname) or removed
+		-- 	end
+		-- 	hasdiff = true
+		-- end
 		if not hasdiff then
 			if recipe.ingredients then
 				removed = removeingredient(recipe.ingredients, ingredientname)
+				if not removed then
+					log("Warning: removeingredient: ingredient " .. ingredientname .. " not found in recipe " .. recipename)
+					log(debug.traceback())
+				end
 			end
 		end		
 	end
@@ -609,20 +613,20 @@ function sctm.recipe_ingredient_add(recipename, ingredientnormal, ingredientexpe
 	if data.raw.recipe[recipename] and (data.raw.item[normal.name] or data.raw.fluid[normal.name]) and (data.raw.item[expensive.name] or data.raw.fluid[expensive.name]) then
 		local recipe = data.raw.recipe[recipename]
 		local hasdiff = false
-		if recipe.normal then
-			if not recipe.normal.ingredients then
-				recipe.normal.ingredients = {}
-			end
-			added = addingredient(recipe.normal.ingredients, normal)
-			hasdiff = true
-		end
-		if recipe.expensive then
-			if not recipe.expensive.ingredients then
-				recipe.expensive.ingredients = {}
-			end
-			added = addingredient(recipe.expensive.ingredients, expensive) or added
-			hasdiff = true
-		end
+		-- if recipe.normal then
+		-- 	if not recipe.normal.ingredients then
+		-- 		recipe.normal.ingredients = {}
+		-- 	end
+		-- 	added = addingredient(recipe.normal.ingredients, normal)
+		-- 	hasdiff = true
+		-- end
+		-- if recipe.expensive then
+		-- 	if not recipe.expensive.ingredients then
+		-- 		recipe.expensive.ingredients = {}
+		-- 	end
+		-- 	added = addingredient(recipe.expensive.ingredients, expensive) or added
+		-- 	hasdiff = true
+		-- end
 		if not hasdiff then
 			if not recipe.ingredients then
 				recipe.ingredients = {}
@@ -687,19 +691,19 @@ function sctm.recipe_ingredient_replace(recipename, oldingredientnormal, newingr
 	end
 	if data.raw.recipe[recipename] and (data.raw.item[normal.name] or data.raw.fluid[normal.name]) and (data.raw.item[expensive.name] or data.raw.fluid[expensive.name]) then
 		local recipe = data.raw.recipe[recipename]
-		local hasdiff = false
-		if recipe.normal then
-			if recipe.normal.ingredients then
-				replaced = replaceingredient(recipe.normal.ingredients, oldnormal, normal)
-			end
-			hasdiff = true
-		end
-		if recipe.expensive then
-			if recipe.expensive.ingredients then
-				replaced = replaceingredient(recipe.expensive.ingredients, oldexpensive, expensive) or replaced
-			end
-			hasdiff = true
-		end
+		local hasdiff = false -- TODO: remove this var and if
+		-- if recipe.normal then
+		-- 	if recipe.normal.ingredients then
+		-- 		replaced = replaceingredient(recipe.normal.ingredients, oldnormal, normal)
+		-- 	end
+		-- 	hasdiff = true
+		-- end
+		-- if recipe.expensive then
+		-- 	if recipe.expensive.ingredients then
+		-- 		replaced = replaceingredient(recipe.expensive.ingredients, oldexpensive, expensive) or replaced
+		-- 	end
+		-- 	hasdiff = true
+		-- end
 		if not hasdiff then
 			if recipe.ingredients then
 				replaced = replaceingredient(recipe.ingredients, oldnormal, normal)
@@ -764,18 +768,18 @@ function sctm.recipe_result_replace(recipename, oldresultnormal, newresultnormal
 	if data.raw.recipe[recipename] and (data.raw.item[normal.name] or data.raw.fluid[normal.name]) and (data.raw.item[expensive.name] or data.raw.fluid[expensive.name]) then
 		local recipe = data.raw.recipe[recipename]
 		local hasdiff = false
-		if recipe.normal then
-			if recipe.normal.results then
-				replaced = replaceresult(recipe.normal.results, oldnormal, normal)
-			end
-			hasdiff = true
-		end
-		if recipe.expensive then
-			if recipe.expensive.results then
-				replaced = replaceresult(recipe.expensive.results, oldexpensive, expensive) or replaced
-			end
-			hasdiff = true
-		end
+		-- if recipe.normal then
+		-- 	if recipe.normal.results then
+		-- 		replaced = replaceresult(recipe.normal.results, oldnormal, normal)
+		-- 	end
+		-- 	hasdiff = true
+		-- end
+		-- if recipe.expensive then
+		-- 	if recipe.expensive.results then
+		-- 		replaced = replaceresult(recipe.expensive.results, oldexpensive, expensive) or replaced
+		-- 	end
+		-- 	hasdiff = true
+		-- end
 		if not hasdiff then
 			if recipe.results then
 				replaced = replaceresult(recipe.results, oldnormal, normal)
@@ -859,16 +863,17 @@ end
 function sctm.hide_recipe(recipe_name)
   r = data.raw.recipe[recipe_name]
   if r then
-    if not r.normal and not r.expensive then
-      r.hidden = true
-    else
-      if r.normal then
-        r.normal.hidden = true
-      end
-      if r.expensive then
-        r.expensive.hidden = true
-      end
-    end
+    -- if not r.normal and not r.expensive then
+    --   r.hidden = true
+    -- else
+    --   if r.normal then
+    --     r.normal.hidden = true
+    --   end
+    --   if r.expensive then
+    --     r.expensive.hidden = true
+    --   end
+    -- end
+    r.hidden = true
   end
 end
 
